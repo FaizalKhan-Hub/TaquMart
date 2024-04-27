@@ -3,7 +3,7 @@ import {ActivityIndicator, Image, StyleSheet, Text, View} from 'react-native';
 
 // Components
 import Ripple from 'react-native-material-ripple';
-import {IS_ANDROID, colors, hp, dimens, pixel} from '../utils';
+import {IS_ANDROID, colors, hp, dimens, pixel, font} from '../utils';
 
 function PrimaryButton({
   onPress,
@@ -60,17 +60,16 @@ const styles = StyleSheet.create({
     width: '100%',
     borderRadius: 10,
     overflow: 'hidden',
-    paddingBottom: IS_ANDROID ? 2 : 0,
+    paddingBottom: 2,
     alignItems: 'center',
     height: hp(48),
     justifyContent: 'center',
-    backgroundColor: colors.mainColor,
+    backgroundColor: colors.primaryColor,
   },
   buttonText: {
-    // ...font(600, 12, colors.primaryColor1),
+    ...font(600, 12),
     fontWeight: '600',
     fontSize: pixel(12),
-    color: colors.primaryColor,
     textAlign: 'center',
   },
 });

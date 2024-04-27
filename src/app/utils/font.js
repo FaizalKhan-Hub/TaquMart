@@ -1,4 +1,5 @@
-﻿import pixel from './pixel';
+﻿import colors from './colors';
+import pixel from './pixel';
 
 export const INTER = {
   100: 'Inter_100Thin',
@@ -12,9 +13,9 @@ export const INTER = {
   900: 'Inter_900Black',
 };
 
-export function font(font, size, color = '#003970') {
+export function font(font, size, color = colors.blackColor) {
   return {
-    fontFamily: font,
+    // fontFamily: font,
     fontSize: pixel(size),
     color,
     fontWeight: font.toString(),
