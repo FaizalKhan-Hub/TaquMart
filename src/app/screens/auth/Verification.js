@@ -2,10 +2,12 @@ import React, {useEffect, useRef, useState} from 'react';
 import {StyleSheet, Text, TextInput, View} from 'react-native';
 import {PrimaryButon} from '../../components';
 import {colors, font, hp, wp} from '../../utils';
+import {useNavigation} from '@react-navigation/native';
 
 const Verification = () => {
   const [timer, setTimer] = useState(30);
   const inputRefs = useRef([]);
+  const navigation = useNavigation();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -46,7 +48,10 @@ const Verification = () => {
       <Text style={{...font(400, 14), marginBottom: hp(10)}}>
         Resend again in {timer} seconds
       </Text>
-      <PrimaryButon title={'Verify code'} />
+      <PrimaryButon
+        title={'Verify code'}
+        onPress={() => navigation.navigate('BottomNavigator')}
+      />
     </View>
   );
 };
