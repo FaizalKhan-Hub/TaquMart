@@ -1,4 +1,5 @@
 export {default as font} from './font';
+// export {default as CheckNetInfo} from './netInfo';
 export {default as colors} from './colors';
 export {wp, hp} from './dimension';
 export {default as pixel} from './pixel';

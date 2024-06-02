@@ -3,6 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {colors, font, hp, pixel, wp} from '../../utils';
 import {FormInput, PrimaryButon} from '../../components';
 import {useNavigation} from '@react-navigation/native';
+import {CheckNetInfo} from '../../utils/netInfo';
 
 const Welcome = () => {
   const navigation = useNavigation();
@@ -12,6 +13,7 @@ const Welcome = () => {
         <Text style={styles.title}>
           Get Your daily needs {'\n'} within 30 minutes
         </Text>
+        <CheckNetInfo />
         <View style={styles.subtitleContainer}>
           <View style={styles.line} />
           <Text style={styles.subtitle}>Login or Registration</Text>

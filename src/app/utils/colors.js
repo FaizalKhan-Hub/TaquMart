@@ -1,5 +1,5 @@
 export default {
-  whiteColor: '#fff',
+  whiteColor: '#ffffff',
   blackColor: '#000',
   primaryColor: '#80DCAF',
   secondaryColor: '#524D57',

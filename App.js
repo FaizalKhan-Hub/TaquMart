@@ -7,6 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {PrimaryButon} from './src/app/components';
 import AppNavigation from './src/app/navigators/AppNavigation';
 import {colors} from './src/app/utils';
+import {CheckNetInfo} from './src/app/utils/netInfo';
 
 const App = () => {
   const {t} = useTranslation();
@@ -20,13 +21,15 @@ const App = () => {
 
   return (
     <I18nextProvider i18n={i18n}>
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: colors.whiteColor,
-        }}>
-        <AppNavigation />
-      </View>
+      <CheckNetInfo>
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: colors.whiteColor,
+          }}>
+          <AppNavigation />
+        </View>
+      </CheckNetInfo>
     </I18nextProvider>
   );
 };

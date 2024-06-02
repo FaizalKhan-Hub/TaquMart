@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {Verification, Welcome} from '../screens/auth';
 import BottomNavigator from './BottomNavigator';
+import SplashScreen from '../screens/auth/SplashScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,6 +13,7 @@ function AppNavigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="Verification" component={Verification} />
         <Stack.Screen name="BottomNavigator" component={BottomNavigator} />
